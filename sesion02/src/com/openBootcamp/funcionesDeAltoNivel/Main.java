@@ -48,7 +48,7 @@ public class Main {
         nombres.add("Sonia");
         nombres.add("Soledad");
 
-        // Forma funcional
+        // 1.1. Forma funcional
         // nombres.stream().forEach(System.out::println); // 1. método sencillo (version corta de una lamda)
         // nombres.stream().forEach(x -> System.out.println(x)); // 2. método sencillo con lamda (en desuso)
         Stream<String> valores = nombres.stream()
@@ -56,28 +56,32 @@ public class Main {
                 .filter(x -> x.startsWith("S")); // solo quiero que se guarden en el stream lo empiezan con "S"
         valores.forEach(x -> System.out.println(x));
 
+        // 1.2.Forma imperativa (tradicional)
+        /*
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }*/
+
+
         // EJEMPLO: Convertir un array de números a stream y sumar solo los números pares.
+        // 2.1.Forma funcional
         int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         var stNumeros = Arrays.stream(numeros)
                 .filter(x -> x % 2 == 0).reduce(0, (x, y) -> {
                     System.out.println("'x' vale " + x + " e " + "'y' vale " + y);
                     return x + y;
                 });
-        System.out.println("La suma total de los números pares es: " + stNumeros);
 
-        // stNumeros.forEach(System.out::println);
-
-
-        // Forma tradicional
-        /*
-        for (String nombre : nombres) {
-            System.out.println(nombre);
+        // 2.2.Forma imperativa (tradicional)
+        int sumaTotal = 0;
+        for (int numero : numeros) {
+            if (numero % 2 != 0) {
+                continue;
+            }
+            sumaTotal += numero;
         }
-        */
-    }
 
-    // 2. Método (no funcional)
-    public static String toMayuscula(String nombre) {
-        return nombre.toUpperCase();
+        System.out.println("La suma total de los números pares es:\nForma funcional: " + stNumeros + "\nForma " +
+                "imperativa: " + sumaTotal);
     }
 }
