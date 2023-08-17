@@ -11,32 +11,44 @@ El ejercicio muestra dos formas de convertir una cadena de texto a mayusculas.
 
 .map() -> Por cada resultado generado por «.stream()» le aplica otra función. Es decir, la función .map() aplica lo
 que le indicamos sobre cada elemento que recibimos de un .stream()
+.filter() -> Elimina información
+Arrays.stream(nombreVariable) -> De esta forma convertimos un array (por ej. de números) a un stream
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.stream.Stream;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Funcionales f = new Funcionales();
-        f.pruebasFunciones();
+        // Funcionales f = new Funcionales();
+        // f.pruebasFunciones();
 
         // llamamos al método
-        System.out.println(toMayuscula("Juan"));
+        // System.out.println(toMayuscula("Juan"));
 
         ArrayList<String> nombres = new ArrayList<>();
         nombres.add("Ana");
         nombres.add("Marta");
         nombres.add("Sonia");
+        nombres.add("Soledad");
 
         // Forma funcional
-        nombres.stream().forEach(System.out::println); // 1. método sencillo (version corta de una lamda)
-        nombres.stream().forEach(x -> System.out.println(x)); // 2. método sencillo con lamda (en desuso)
+        // nombres.stream().forEach(System.out::println); // 1. método sencillo (version corta de una lamda)
+        // nombres.stream().forEach(x -> System.out.println(x)); // 2. método sencillo con lamda (en desuso)
         Stream<String> valores = nombres.stream()
-                .map(y -> "Hola " + y.toUpperCase()); // 3. convierte cada elemento del String a mayúsculas
-        valores.forEach(z -> System.out.println(z));
+                .map(x -> x.toUpperCase())  // 3. convierte cada elemento del String a mayúsculas
+                .filter(x -> x.startsWith("S")); // solo quiero que se guarden en el stream lo empiezan con "S"
+        valores.forEach(x -> System.out.println(x));
+
+        // EJEMPLO: Convertir un array de números a stream
+        int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        var stNumeros = Arrays.stream(numeros)
+                .filter(x -> x % 2 == 0);
+        stNumeros.forEach(System.out::println);
+
 
         // Forma tradicional
         /*
