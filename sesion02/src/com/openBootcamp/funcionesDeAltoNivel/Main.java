@@ -11,8 +11,21 @@ El ejercicio muestra dos formas de convertir una cadena de texto a mayusculas.
 
 .map() -> Por cada resultado generado por «.stream()» le aplica otra función. Es decir, la función .map() aplica lo
 que le indicamos sobre cada elemento que recibimos de un .stream()
-.filter() -> Elimina información
+
+.filter() -> Filtra y elimina información
 Arrays.stream(nombreVariable) -> De esta forma convertimos un array (por ej. de números) a un stream
+
+.reduce() -> Toma todos los elementos que quedan del .filter() y lo reduce a una expresión.
+
+NOTA: Al .reduce() hay que darle una variable (o valor) inicial.
+        Si es un string se le coloca una comilla doble.
+        Si es un int se le coloca 0.
+        Si es un double se le coloca 0.0.
+        Si es un boolean se le coloca false.
+        Si es un char se le coloca un carácter vacío.
+      Y en el caso de ser un int a continuación se le pasa la expresión de reducción. Es decir, cómo va a reducir los
+       los números.
+
  */
 
 import java.util.ArrayList;
@@ -43,11 +56,16 @@ public class Main {
                 .filter(x -> x.startsWith("S")); // solo quiero que se guarden en el stream lo empiezan con "S"
         valores.forEach(x -> System.out.println(x));
 
-        // EJEMPLO: Convertir un array de números a stream
+        // EJEMPLO: Convertir un array de números a stream y sumar solo los números pares.
         int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         var stNumeros = Arrays.stream(numeros)
-                .filter(x -> x % 2 == 0);
-        stNumeros.forEach(System.out::println);
+                .filter(x -> x % 2 == 0).reduce(0, (x, y) -> {
+                    System.out.println("'x' vale " + x + " e " + "'y' vale " + y);
+                    return x + y;
+                });
+        System.out.println("La suma total de los números pares es: " + stNumeros);
+
+        // stNumeros.forEach(System.out::println);
 
 
         // Forma tradicional
