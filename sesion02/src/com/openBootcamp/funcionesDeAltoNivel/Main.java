@@ -48,7 +48,7 @@ public class Main {
         nombres.add("Sonia");
         nombres.add("Soledad");
 
-        // 1.1. Forma funcional
+        // 1.1. Forma funcional o declarativa
         // nombres.stream().forEach(System.out::println); // 1. método sencillo (version corta de una lamda)
         // nombres.stream().forEach(x -> System.out.println(x)); // 2. método sencillo con lamda (en desuso)
         Stream<String> valores = nombres.stream()
@@ -64,7 +64,7 @@ public class Main {
 
 
         // EJEMPLO: Convertir un array de números a stream y sumar solo los números pares.
-        // 2.1.Forma funcional
+        // 2.1.Forma funcional o declarativa
         int[] numeros = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         var stNumeros = Arrays.stream(numeros)
                 .filter(x -> x % 2 == 0).reduce(0, (x, y) -> {
