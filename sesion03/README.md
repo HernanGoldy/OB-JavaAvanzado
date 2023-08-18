@@ -16,6 +16,5 @@ que va a parar la recursividad cuando ocurra algo, porque sino **la recursividad
 * Recursividad por cabeza(_Head Recursion_): lo primero que hacemos es invocar a la función recursiva.
 
 #### Recursión Funcional
-=======
+
 * Recursividad por cabeza(_Head Recursion_): lo primero que hacemos es invocar a la función recursiva.
->>>>>>> origin/main
