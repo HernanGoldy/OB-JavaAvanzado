@@ -12,6 +12,10 @@ que va a parar la recursividad cuando ocurra algo, porque sino **la recursividad
 #### Esxisten dos tipos de recursividad
 
 * Recursividad de cola (_Tail Recursion_): lo último que se ejecuta es la llamada de la función hacia sí misma.
+<<<<<<< HEAD
 * Recursividad por cabeza(_Head Recursion_): lo primero que hacemos es invocar a la función recursiva.
 
 #### Recursión Funcional
+=======
+* Recursividad por cabeza(_Head Recursion_): lo primero que hacemos es invocar a la función recursiva.
+>>>>>>> origin/main
