@@ -12,6 +12,10 @@ Patrón CRUD (Create Replace Update Delete)
 * PUT -> Actualizar
 * DELETE -> Eliminar
 
+### Controlador
+
+
+
 ### Modelos
 
 Un modelo es lo que dá forma o el que contiene la información de los datos.

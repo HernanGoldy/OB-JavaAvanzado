@@ -6,15 +6,14 @@ public class Bootcamper {
 
     // atributos (características)
     private String nombre;
-
+    private double valor;
 
     // constructores
     public Bootcamper() {}
-
-    public Bootcamper(String nombre) {
+    public Bootcamper(String nombre, double valor) {
         this.nombre = nombre;
+        this.valor = valor;
     }
-
 
     // getters and setters
     public String getNombre() { return nombre; }

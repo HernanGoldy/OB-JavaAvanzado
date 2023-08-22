@@ -1,18 +1,38 @@
 package com.openbootcamp.controllers;
 
+
+import com.openbootcamp.models.Bootcamper;
+import com.openbootcamp.services.BootcamperService;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
 import org.springframework.stereotype.Component;
 
-import javax.swing.plaf.PanelUI;
+import java.util.List;
 
 @Component
 @Path("/")
 public class BootcampersController {
 
+    // atributos (características)
+    private BootcamperService bootcamperService; // variable de instancia
+
+    // constructores - aquí hacemos la inyección de dependencias a través de los parámetros
+    public BootcampersController(BootcamperService bootcamperService) {
+        this.bootcamperService = bootcamperService;
+
+        this.bootcamperService.add(new Bootcamper("uno", Math.random()));
+        this.bootcamperService.add(new Bootcamper("dos", Math.random()));
+        this.bootcamperService.add(new Bootcamper("tres", Math.random()));
+        this.bootcamperService.add(new Bootcamper("cuatro", Math.random()));
+        this.bootcamperService.add(new Bootcamper("cinco", Math.random()));
+    }
+
     // métodos/funciones (comportamientos)
     @GET
-    public String hola() {
-        return "Hola";
+    @Path("/bootcampers")
+    @Produces("application/json")
+    public List<Bootcamper> listarTodos() {
+        return bootcamperService.getAll();
     }
 }
