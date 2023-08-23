@@ -36,3 +36,20 @@ La función del servicio es tener una lista de bootcampers en memoria:
     aplicación rest.
 >5. El _servicio_ es quién se comunica directamente con el _modelo_.
 
+### IMPORTANTE: Comando para curl en Windows
+
+Para colocar un formato _json_ en curl de Windows, se debe colocar de la siguiente forma:
+>"{\"clave\": \"valor\"}"
+
+Luego de colocar la primera comilla doble (") va la llave de apertura ({), luego un caracter de escape seguido del 
+inicio de la comilla doble (\"), ya que curl no reconoce las comillas simples (').
+
+El _json_ debe escribirse así:
+
+>curl -X POST localhost:8080/bootcampers -H "Content-Type: application/json" -d "{\"nombre\":\"OpenBootcamp\"}"
+> 
+>curl -X PUT localhost:8080/bootcampers -H "Content-Type: application/json" -d "{\"nombre\": \"seis\"}"
+> 
+> Nos muestra la URL del bootcamper creado:
+> 
+> curl -X POST localhost:8080/bootcampers -H "Content-Type: application/json" -d "{\"nombre\": \"seis\", \"valor\": 14.25}" -D - -v
