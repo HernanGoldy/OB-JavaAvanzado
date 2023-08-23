@@ -36,6 +36,13 @@ public class BootcampersController {
         return bootcamperService.getAll();
     }
 
+    @GET
+    @Path("/bootcampers/{nombre}")
+    @Produces("application/json") // dice qué tipo de respuesta va a ejecutar (un json)
+    public Bootcamper listarUno(@PathParam("nombre") String nombre) {
+        return bootcamperService.get(nombre);
+    }
+
     @POST
     @Path("/bootcampers")
     @Produces("application/json") // dice qué tipo de respuesta va a ejecutar (un json)
