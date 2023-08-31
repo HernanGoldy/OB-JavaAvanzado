@@ -21,4 +21,4 @@ Sirve compartir una _instancia_ para evitar múltiples instancias de una misma c
 
 ### **_Factory:**
 
-Sirve para crear una jerarquía de clases y utilizar una u otra de forma transparente. 
+Sirve para crear una jerarquía de clases y utilizar una u otra de forma transparente. Permite cohesionar una jerarquía de clases en una única.

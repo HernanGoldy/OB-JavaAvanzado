@@ -9,5 +9,8 @@ public class Main {
 
         PrecioFactory precio2 = new PrecioFactory("USA");
         System.out.println(precio2.getPrecio());
+
+        PrecioFactory precio3 = new PrecioFactory("UK");
+        System.out.println(precio3.getPrecio());
     }
 }

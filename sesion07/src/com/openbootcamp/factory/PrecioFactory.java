@@ -21,7 +21,11 @@ public class PrecioFactory {
         if (pais.equalsIgnoreCase("España")) {
             System.out.println("España, precio en EUR");
             precio = new PrecioEUR();
-        } else {
+        } else if (pais.equalsIgnoreCase("UK")) {
+            System.out.println("UK, precio en GBP");
+            precio = new PrecioGBP();
+        }
+        else {
             System.out.println("Otro país, precio en USD");
             precio = new PrecioUSD();
         }
