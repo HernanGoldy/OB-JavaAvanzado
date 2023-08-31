@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Aplicacion app = Aplicacion.getInstance();
-        Aplicacion app2 = Aplicacion.getInstance();
+        Aplicacion app = Aplicacion.getInstance(); // new Aplication()
+        Aplicacion app2 = Aplicacion.getInstance(); // app2 = app
 
         app.Run();
         app2.Run();
