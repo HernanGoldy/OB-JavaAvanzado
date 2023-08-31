@@ -26,4 +26,10 @@ public class PrecioFactory {
             precio = new PrecioUSD();
         }
     }
+
+    // métodos/funciones (comportamientos)
+    // para evitar tener que colocar en el main ".precio.getPrecio()" y solo colocar ".getPrecio()"
+    public double getPrecio() {
+        return precio.getPrecio();
+    }
 }
