@@ -1,4 +1,4 @@
-package com.openbootcamp.builder;
+package com.openbootcamp.patronesCreacionales.builder;
 
 public class Vehiculo {
 

@@ -1,4 +1,4 @@
-package com.openbootcamp.factory;
+package com.openbootcamp.patronesCreacionales.factory;
 
 public class PrecioEUR implements Precio {
 

@@ -25,4 +25,4 @@ Sirve para crear una jerarquía de clases y utilizar una u otra de forma transpa
 
 ### **_Builder:**
 
-Nos permite construir objetos complejos paso a paso.
+Nos permite construir objetos complejos paso a paso. Utiliza el método de la programación fluída. Nos devuelve un objeto que hemos creado previamente.
