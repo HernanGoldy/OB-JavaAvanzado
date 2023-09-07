@@ -1,14 +1,18 @@
 ## Patrones Estructurales
-
+### Los patrones estructurales son 3:
 ✔ Decorator
 
-✔ Adaptador
+✔ Adapter
 
 ✔ Fachada
 
-Un _**patrón decorator**_ añade funcionalidad a una clase, ya existente, sin modificar esa clase ya existente. Es 
+
+### **_Decorator:**
+
+Un _**patrón decorator**_ añade funcionalidad a una clase, ya existente, sin modificar esa clase ya existente. Es
 decir, mejora la clase sin tocar la clase original.
 
-### Los patrones creacionales son 4:
+### **_Adapter:**
 
-### **_Singleton:**
+Un _**patrón adapter**_ crea una clase que permite que clases con la misma implementación y clases con distintas 
+implementaciones funcionen coherentemente.
