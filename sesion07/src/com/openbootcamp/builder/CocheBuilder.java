@@ -1,4 +1,4 @@
-package com.openbootcamp.patronesCreacionales.builder;
+package com.openbootcamp.builder;
 
 public class CocheBuilder {
 

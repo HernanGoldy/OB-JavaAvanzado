@@ -1,4 +1,4 @@
-package com.openbootcamp.patronesCreacionales.factory;
+package com.openbootcamp.factory;
 
 public interface Precio {
     // atributos (características)

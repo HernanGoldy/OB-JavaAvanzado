@@ -1,4 +1,4 @@
-package com.openbootcamp.patronesCreacionales.singleton;
+package com.openbootcamp.singleton;
 
 public class Main {
 

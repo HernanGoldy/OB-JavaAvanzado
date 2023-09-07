@@ -1,4 +1,4 @@
-package com.openbootcamp.patronesCreacionales.prototype;
+package com.openbootcamp.prototype;
 
 public class Moto implements Cloneable{
     // atributes

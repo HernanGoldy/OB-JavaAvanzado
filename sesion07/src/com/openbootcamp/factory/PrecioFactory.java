@@ -1,4 +1,4 @@
-package com.openbootcamp.patronesCreacionales.factory;
+package com.openbootcamp.factory;
 
 /*
 Aquí implemento el patrón Factory.
