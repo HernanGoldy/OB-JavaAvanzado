@@ -4,7 +4,7 @@
 
 ✔ Adapter
 
-✔ Fachada
+✔ Facade
 
 
 ### **_Decorator:**
@@ -16,3 +16,8 @@ decir, mejora la clase sin tocar la clase original.
 
 Un _**patrón adapter**_ crea una clase que permite que clases con la misma implementación y clases con distintas 
 implementaciones funcionen coherentemente.
+
+### **_Facade:**
+
+El _**patrón facade**_ consiste en esconder toda la lógica en una única llamada. Es decir, oculta (como en una fachada)
+la complejidad del código, poniendo delante lo sencillo.

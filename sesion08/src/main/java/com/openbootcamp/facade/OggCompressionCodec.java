@@ -1,0 +1,5 @@
+package com.openbootcamp.facade;
+
+public class OggCompressionCodec implements Codec {
+    public String type = "ogg";
+}
