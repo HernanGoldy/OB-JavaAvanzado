@@ -41,7 +41,8 @@ que algo ha pasado.
 
 El _**patrón mediator**_ actúa de mediador (de comunicador) entre dos objetos. ¡CORRE VE Y DILE!
 
-Este patrón en muy útil cuando tenemos a muchas clases que se tienen que comunicar entre ellas.
+Este patrón en muy útil cuando tenemos a muchas clases que se tienen que comunicar entre ellas. Y es muy útil en 
+interfaces de usuarios.
 
 Por ejemplo: si tenemos que comunicar a 5 clases entre ellas, utilizaríamos a una _clase mediadora_ donde si la 
 clase A quiere comunicarse con la clase B, tiene que darle el mensaje a la clase mediadora y ésta última le pasa el 
@@ -58,10 +59,10 @@ SÍ MISMO. HAY QUE EVITAR LA DUPLICIDAD. Es decir, si tengo una instancia de un 
 ésa instancia.
 
 Forma correcta:
->> if (!colegas.contains(colega)) {
->>     colegas.add(colega);
->>     colega.setMediator(this);
->> }
+> if (!colegas.contains(colega)) {
+>     colegas.add(colega);
+>    colega.setMediator(this);
+> }
 
 Podemos utilizar _clases abstractas_: En estas clases, parte del código está dentro de la clase y otra parte del 
 código tenemos que _implementarla_ como si fuera una _interfase_.
@@ -69,4 +70,15 @@ código tenemos que _implementarla_ como si fuera una _interfase_.
 #### Terminología habitual (y oficial) del Patrón Mediator
 - MediadorConcreto (clase): El término _Concreto_ hace referencia a un _Mediador único_ y debe _extender_ de la 
   _clase abstracta_ Mediator.
-- ColegaConcreto1 (clase): Va a _extender_ de la clase abstracta y hacer una instancia en concreto
+- ColegaConcreto1 (clase): Va a _extender_ de la clase abstracta y hacer una instancia en concreto.
+
+### **_State:**
+
+El _**patrón state**_ es para una sucesión de eventos. ¡HASTA QUE NO HAGAS ESTO, NO PUEDES HACER LO OTRO!
+
+Por ejemplo: Si hay tres estados, no pedo hacer el estado 3 sin hacer (primero) el estado 1, luego el estado 2 y por 
+último el estado 3.
+
+Este patrón se utiliza para crear flujos de trabajo (workflows).
+
+1. Podemos nombrar a una clase abstracta _Estado_ para indicar en qué estado se encuentra mi programa.
