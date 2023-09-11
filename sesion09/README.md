@@ -74,7 +74,11 @@ código tenemos que _implementarla_ como si fuera una _interfase_.
 
 ### **_State:**
 
-El _**patrón state**_ es para una sucesión de eventos. ¡HASTA QUE NO HAGAS ESTO, NO PUEDES HACER LO OTRO!
+El _**patrón state**_ consiste en implementar una clase abstracta con una serie de funciones. Cada función va a 
+cumplir un comentido, y una función va a permitir cambiar el _Estado_ a la siguiente función y así sucesivamente, 
+como si fuera una cadena de eventos: si estoy en el estado "A", solamente me puedo ir al estado "B". Si estoy en 
+estado "B", solamente me puedo ir al estado "C". Es una sucesión de eventos. ¡HASTA QUE NO HAGAS ESTO, NO PUEDES 
+HACER LO OTRO!
 
 Por ejemplo: Si hay tres estados, no pedo hacer el estado 3 sin hacer (primero) el estado 1, luego el estado 2 y por 
 último el estado 3.
@@ -82,3 +86,13 @@ Por ejemplo: Si hay tres estados, no pedo hacer el estado 3 sin hacer (primero) 
 Este patrón se utiliza para crear flujos de trabajo (workflows).
 
 1. Podemos nombrar a una clase abstracta _Estado_ para indicar en qué estado se encuentra mi programa.
+
+### **_Strategy:**
+
+El _**patrón strategy**_ se utiliza para crear un envoltorio sobre varias funciones de forma que un mismo código se 
+pueda utilizar de formas diferentes. Es decir, si tenemos diferentes clases que implementan una misma interfase y 
+creamos, podremos utilizarlas indistintamente.
+
+1. Creamos la clase interface para implementarla en las clases comunes
+2. Una ves realizadas las implementaciones, en el main debemos hacer los _envoltorios_ (función que según el 
+   parámetro que le pase, va a invocar a una clase o a otra) correspondientes
