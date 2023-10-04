@@ -23,10 +23,10 @@ sola clase, separar claramente «por capas» la funcionalidad de una aplicación
 2. Capa de Lógica de la aplicación (Capa de Casos de Usos): Todo lo que ocurra en la aplicación tiene que estar 
    considerado como un _caso de uso_.
     - Aplicación web en la que solicitamos un listado de usuarios, pero esa app web no sabe nada de usuarios porque no 
-      tiene un caso de uso de listar usuarios. Simplemente conoce - por ejemplo - como hacer recetas de cocina.
+      tiene un caso de uso de listar usuarios. Simplemente, conoce - por ejemplo - como hacer recetas de cocina.
 
 3. Capa de Interfaces Adaptadoras, donde tenemos las funciones que implementan funciones para esos casos de usos
-    - Interafaces
+    - Interfaces
     - Clases Abstractas
 
 4. Capa de Frameworks y Controladores (es la capa que está más abajo - la última capa)
@@ -48,6 +48,9 @@ frameworks, sino solamente en la última capa.
     - Bases de datos
     - Sistema de ficheros
     - Dispositivos remotos
+
+> La primera etapa toma la petición, la segunda etapa procesa la información y una vez procesada, solicita la 
+> información necesaria a la tercera etapa.
 
 ### Principios SOLID
 
