@@ -64,7 +64,7 @@ referencia a 5 principios:
   > extender pero cerradas a la hora de modificarlas.
 - **L - Liskov Substitution Principle (LSP)**
     >**Principio de Substitución de Liskov:** Declara que una clase se tiene que poder sustituir por la clase padre. 
-  > Este principio dice que un programa debe tener una jerarquía de clases fácil de entender y que además tenga 
+  > Este principio dice que un programa debe tener una jerarquía de clases fácil de entender y que además tenga un 
   > código reutilizable.
 - **I - Interface Segregation Principle (ISP)**
     >**Principio de Segregación de Interfaces:** Dice que una clase no debe implementar o depender de una interfase 
